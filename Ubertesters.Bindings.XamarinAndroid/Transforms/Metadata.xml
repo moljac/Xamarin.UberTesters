@@ -1,0 +1,79 @@
+<metadata>
+  <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+
+  <attr 
+	path="/api/package[@name='com.ubertesters.sdk']" 
+	name="managedName"
+	>
+	UberTestersSDK
+  </attr>
+  <attr 
+	path="/api/package[@name='com.ubertesters.sdk.factory']" 
+	name="managedName"
+	>
+	UberTestersSDK.Factory
+  </attr>
+  <attr 
+	path="/api/package[@name='com.ubertesters.sdk.model']" 
+	name="managedName"
+	>
+	UberTestersSDK.Model
+  </attr>
+  <attr 
+	path="/api/package[@name='com.ubertesters.sdk.tools']" 
+	name="managedName"
+	>
+	UberTestersSDK.Tools
+  </attr>
+  <attr 
+	path="/api/package[@name='com.ubertesters.sdk.utility']" 
+	name="managedName"
+	>
+	UberTestersSDK.Utility
+  </attr>
+ 
+  <attr 
+	path="/api/package[@name='com.ubertesters.common']" 
+	name="managedName"
+	>
+	UberTestersSDK.Common
+  </attr>
+  <attr 
+	path="/api/package[@name='com.ubertesters.common.models']" 
+	name="managedName"
+	>
+	UberTestersSDK.Common.Models
+  </attr>
+  <attr 
+	path="/api/package[@name='com.ubertesters.common.settings']" 
+	name="managedName"
+	>
+	UberTestersSDK.Common.Settings
+  </attr>
+  <attr 
+	path="/api/package[@name='com.ubertesters.common.utils']" 
+	name="managedName"
+	>
+	UberTestersSDK.Common.Utils
+  </attr>
+  <attr 
+	path="/api/package[@name='com.ubertesters.common.utils.api']" 
+	name="managedName"
+	>
+	UberTestersSDK.Common.Utils.API
+  </attr>
+  <!--
+  -->
+
+  <!--
+  Warning BG8501: 
+  empty event name in Com.Ubertesters.Sdk.Utility.ScreenshotProvider.IListener.SetListener 
+  -->
+
+</metadata>
