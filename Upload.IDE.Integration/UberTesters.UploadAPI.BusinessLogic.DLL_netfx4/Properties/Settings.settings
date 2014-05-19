@@ -1,0 +1,30 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="UberTesters.UploadAPI.BusinessLogic.DLL_netfx4.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="PackagePathFolder" Type="System.String" Scope="User">
+      <Value Profile="(Default)">..\..\..\bundles\</Value>
+    </Setting>
+    <Setting Name="PackagePathFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Ubertesters.Application.XamarinAndroid-Signed.apk</Value>
+    </Setting>
+    <Setting Name="UrlUberTesters" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://beta.ubertesters.com/api/client/upload_build.json</Value>
+    </Setting>
+    <Setting Name="UberTestersAPIKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">dc329630b72d0131170722000ac44c54</Value>
+    </Setting>
+    <Setting Name="Title" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Notes" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Status" Type="System.String" Scope="User">
+      <Value Profile="(Default)">in_progress</Value>
+    </Setting>
+    <Setting Name="StopPrevious" Type="System.String" Scope="User">
+      <Value Profile="(Default)">true</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

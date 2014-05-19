@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="UberTesters.Application.XamarinAndroid" android:versionCode="1" android:versionName="1.1" android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="8" android:targetSdkVersion="19" />
 	<application android:label="UberTesters.Application.XamarinAndroid">
-		<meta-data android:name="UberTesters_project_id" android:value="8fe2705e-d4ff-11e3-a44d-22000ac44c54" />
+		<meta-data android:name="UberTesters_project_id" android:value="ubertest-4234-4332-bbe0-ubertesters0" />
 	</application>
 	<uses-permission android:name="android.permission.GET_TASKS" />
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />

@@ -1,0 +1,66 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UberTesters.UploadAPI.BusinessLogic.DLL_netfx4", "UberTesters.UploadAPI.BusinessLogic.DLL_netfx4\UberTesters.UploadAPI.BusinessLogic.DLL_netfx4.csproj", "{D889FC48-FF35-4B4C-BE59-7E9095D46F56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UberTesters.UploadAPI.BusinessLogic.DLL_netfx45", "UberTesters.UploadAPI.BusinessLogic.DLL_netfx45\UberTesters.UploadAPI.BusinessLogic.DLL_netfx45.csproj", "{12B14F26-D7E3-49FF-B62A-B6A5A9512AAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ubertesters.Upload.BusinessLogic.DLLnetfx4", "Ubertesters.Upload.BusinessLogic.DLLnetfx4\Ubertesters.Upload.BusinessLogic.DLLnetfx4.csproj", "{DEB70E69-E189-4EC0-A176-138A479EBDF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UberTesters.UploadAPI.ApplicationConsole.DLL_netfx4", "UberTesters.UploadAPI.ApplicationConsole.DLL_netfx4\UberTesters.UploadAPI.ApplicationConsole.DLL_netfx4.csproj", "{00802F28-5A55-4B52-AADA-3AD01407BED4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ubertesters.UploadAPI.PresentationLayer.DLLGTKSharp20", "Ubertesters.UploadAPI.PresentationLayer.DLLGTKSharp20\Ubertesters.UploadAPI.PresentationLayer.DLLGTKSharp20.csproj", "{7D2A4FBC-B67D-4060-BF38-BB4D3DE70402}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ubertesters.UploadAPI.PresentationLayer.DLLWinFormsnetfx4", "Ubertesters.UploadAPI.PresentationLayer.DLLWinFormsnetfx4\Ubertesters.UploadAPI.PresentationLayer.DLLWinFormsnetfx4.csproj", "{0E0C49B6-764A-48C7-BAA7-AD5FB33C4185}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ubertesters.UploadAPI.PresentationLayer.DLLWPFnetfx4", "Ubertesters.UploadAPI.PresentationLayer.DLLWPFnetfx4\Ubertesters.UploadAPI.PresentationLayer.DLLWPFnetfx4.csproj", "{5C538F7D-AD38-4E0B-9602-CFF3932D0FFC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Xamarin.UberTesters.Private", "Xamarin.UberTesters.Private", "{1DC500AC-B43C-462C-A0E9-77D6395181BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scripts", "Xamarin.UberTesters.Private\Scripts\Scripts.csproj", "{008A2000-29EF-4DB4-A2A2-706060C94A34}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D889FC48-FF35-4B4C-BE59-7E9095D46F56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D889FC48-FF35-4B4C-BE59-7E9095D46F56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D889FC48-FF35-4B4C-BE59-7E9095D46F56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D889FC48-FF35-4B4C-BE59-7E9095D46F56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12B14F26-D7E3-49FF-B62A-B6A5A9512AAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12B14F26-D7E3-49FF-B62A-B6A5A9512AAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12B14F26-D7E3-49FF-B62A-B6A5A9512AAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12B14F26-D7E3-49FF-B62A-B6A5A9512AAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEB70E69-E189-4EC0-A176-138A479EBDF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEB70E69-E189-4EC0-A176-138A479EBDF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEB70E69-E189-4EC0-A176-138A479EBDF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEB70E69-E189-4EC0-A176-138A479EBDF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00802F28-5A55-4B52-AADA-3AD01407BED4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00802F28-5A55-4B52-AADA-3AD01407BED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00802F28-5A55-4B52-AADA-3AD01407BED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00802F28-5A55-4B52-AADA-3AD01407BED4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D2A4FBC-B67D-4060-BF38-BB4D3DE70402}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D2A4FBC-B67D-4060-BF38-BB4D3DE70402}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D2A4FBC-B67D-4060-BF38-BB4D3DE70402}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D2A4FBC-B67D-4060-BF38-BB4D3DE70402}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E0C49B6-764A-48C7-BAA7-AD5FB33C4185}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E0C49B6-764A-48C7-BAA7-AD5FB33C4185}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E0C49B6-764A-48C7-BAA7-AD5FB33C4185}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E0C49B6-764A-48C7-BAA7-AD5FB33C4185}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C538F7D-AD38-4E0B-9602-CFF3932D0FFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C538F7D-AD38-4E0B-9602-CFF3932D0FFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C538F7D-AD38-4E0B-9602-CFF3932D0FFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C538F7D-AD38-4E0B-9602-CFF3932D0FFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{008A2000-29EF-4DB4-A2A2-706060C94A34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{008A2000-29EF-4DB4-A2A2-706060C94A34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{008A2000-29EF-4DB4-A2A2-706060C94A34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{008A2000-29EF-4DB4-A2A2-706060C94A34}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{008A2000-29EF-4DB4-A2A2-706060C94A34} = {1DC500AC-B43C-462C-A0E9-77D6395181BD}
+	EndGlobalSection
+EndGlobal

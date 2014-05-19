@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{12B14F26-D7E3-49FF-B62A-B6A5A9512AAF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UberTesters.UploadAPI.BusinessLogic.DLL_netfx45</RootNamespace>
+    <AssemblyName>UberTesters.UploadAPI.BusinessLogic.DLL_netfx45</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\UberTesters.UploadAPI.BusinessLogic.DLL_netfx4\HttpPost\HttpPostFormUpload.cs">
+      <Link>HttpPost\HttpPostFormUpload.cs</Link>
+    </Compile>
+    <Compile Include="..\UberTesters.UploadAPI.BusinessLogic.DLL_netfx4\HttpPost\HttpPostUpload.cs">
+      <Link>HttpPost\HttpPostUpload.cs</Link>
+    </Compile>
+    <Compile Include="..\UberTesters.UploadAPI.BusinessLogic.DLL_netfx4\HttpPost\UberTestersUploadData.cs">
+      <Link>HttpPost\UberTestersUploadData.cs</Link>
+    </Compile>
+    <Compile Include="..\UberTesters.UploadAPI.BusinessLogic.DLL_netfx4\Properties\Settings.Designer.cs">
+      <Link>Properties\Settings.Designer.cs</Link>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\UberTesters.UploadAPI.BusinessLogic.DLL_netfx4\app.config">
+      <Link>app.config</Link>
+    </None>
+    <None Include="..\UberTesters.UploadAPI.BusinessLogic.DLL_netfx4\packages.config">
+      <Link>packages.config</Link>
+    </None>
+    <None Include="..\UberTesters.UploadAPI.BusinessLogic.DLL_netfx4\Properties\Settings.settings">
+      <Link>Properties\Settings.settings</Link>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties ProjectLinkReference="d889fc48-ff35-4b4c-be59-7e9095d46f56" ProjectLinkerExcludeFilter="\\?desktop(\\.*)?$;\\?silverlight(\\.*)?$;\.desktop;\.silverlight;\.xaml;\.WP.cs;\.MA.cs;\.MT.cs;\.WF.cs;\.WPF.cs;\.ASPNET.cs;\.SLRIA.cs;\.MM.cs;\.Mono.cs;^service references(\\.*)?$;\.clientconfig;^web references(\\.*)?$;\\?\.WP(\\.*)?$;\\?\.MA(\\.*)?$;\\?\.MT(\\.*)?$;\\?\.WF(\\.*)?$;\\?\.WPF(\\.*)?$;\\?\.ASPNET(\\.*)?$;\\?\.SLRIA(\\.*)?$;\\?\.MM(\\.*)?$;\\?\.Mono(\\.*)?$" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

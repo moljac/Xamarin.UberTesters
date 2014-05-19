@@ -1,0 +1,3 @@
+[submodule "Upload.IDE.Integration/Xamarin.UberTesters.Private"]
+	path = Upload.IDE.Integration/Xamarin.UberTesters.Private
+	url = https://moljac@bitbucket.org/moljac/xamarin.ubertesters.private.git
