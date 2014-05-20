@@ -7,8 +7,8 @@ using MonoTouch.Foundation;
 
 namespace Ubertesters.Application.XamarinIOS
 {
-	[Register ("UberTesters")]
-	partial class UberTesters
+	[Register ("Ubertesters")]
+	partial class Ubertesters
 	{
 		void ReleaseDesignerOutlets ()
 		{

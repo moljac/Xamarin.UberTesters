@@ -7,7 +7,7 @@ using MonoTouch.UIKit;
 
 namespace Ubertesters.Application.XamarinIOS
 {
-	public partial class UberTesters : UIViewController
+	public partial class Ubertesters : UIViewController
 	{
 		static bool UserInterfaceIdiomIsPhone
 		{
@@ -17,8 +17,8 @@ namespace Ubertesters.Application.XamarinIOS
 			}
 		}
 
-		public UberTesters ()
-			: base (UserInterfaceIdiomIsPhone ? "UberTesters_iPhone" : "UberTesters_iPad", null)
+		public Ubertesters ()
+			: base (UserInterfaceIdiomIsPhone ? "Ubertesters_iPhone" : "Ubertesters_iPad", null)
 		{
 		}
 

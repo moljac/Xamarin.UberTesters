@@ -7,12 +7,12 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 
-using UberTestersSDK;
-//using UberTesters.Sdk;
+using UbertestersSDK;
+//using Ubertesters.Sdk;
 
-namespace SampleUberTestersSDK
+namespace SampleUbertestersSDK
 {
-	[Activity (Label = "UberTesters Sample", MainLauncher = true)]
+	[Activity (Label = "Ubertesters Sample", MainLauncher = true)]
 	public class MainActivity : Activity
 	{
 		Button buttonLoggerInfo = null;
@@ -88,13 +88,13 @@ namespace SampleUberTestersSDK
 
 			if (text.Contains ("Show"))
 			{
-				// to open UberTesters page; 
+				// to open Ubertesters page; 
 				Ubertesters.ShowUtPage (); 
 				buttonUTpage.Text.Replace ("Show", "Hide");
 			}
 			else if (text.Contains ("Hide"))
 			{
-				// to close UberTesters page; 
+				// to close Ubertesters page; 
 				Ubertesters.HideUtPage (); 
 				buttonUTpage.Text.Replace ("Hide", "Show");
 			}

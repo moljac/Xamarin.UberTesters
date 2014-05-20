@@ -80,7 +80,7 @@ namespace Ubertesters {
 	public partial interface Ubertesters : UITextViewDelegate, UTAlertDelegate {
 
 		[Export ("lockScreen")]
-		LockScreenViewControllerUberTesters LockScreen { get; }
+		LockScreenViewControllerUbertesters LockScreen { get; }
 
 		[Export ("userProfileScreen")]
 		UserProfileViewController UserProfileScreen { get; }
@@ -89,7 +89,7 @@ namespace Ubertesters {
 		string ApiKey { get; set; }
 
 		[Export ("mainView", ArgumentSemantic.Retain)]
-		CustomViewUberTesters MainView { get; set; }
+		CustomViewUbertesters MainView { get; set; }
 
 		[Export ("isOpenGL")]
 		bool IsOpenGL { get; set; }

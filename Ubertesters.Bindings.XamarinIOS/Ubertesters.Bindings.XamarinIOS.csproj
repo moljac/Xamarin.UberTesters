@@ -6,7 +6,7 @@
     <ProjectGuid>{7905C6AE-908B-4CB3-A4BC-F140D9B5736B}</ProjectGuid>
     <ProjectTypeGuids>{F5B4F3BC-B597-4E2B-B552-EF5D8A32436F};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>UbertestersSDK</RootNamespace>
+    <RootNamespace>UberTestersSDK</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>Ubertesters.Bindings.XamarinIOS</AssemblyName>
   </PropertyGroup>
@@ -36,7 +36,7 @@
   </ItemGroup>
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
-    <ObjcBindingApiDefinition Include="Ubertesters.cs" />
+    <ObjcBindingApiDefinition Include="UberTesters.cs" />
   </ItemGroup>
   <ItemGroup>
     <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
