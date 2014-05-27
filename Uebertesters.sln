@@ -178,7 +178,7 @@ Global
 		{DEB70E69-E189-4EC0-A176-138A479EBDF3} = {6ACBA194-78BD-43CD-88DC-7F2787C4D95F}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Ubertesters.Application.XamarinAndroid\Ubertesters.Application.XamarinAndroid.csproj
+		StartupItem = Ubertesters.Application.XamarinIOS\Ubertesters.Application.XamarinIOS.csproj
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

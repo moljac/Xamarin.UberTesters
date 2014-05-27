@@ -57,5 +57,6 @@
     <Compile Include="UbertestersSDK.linkwith.cs">
       <DependentUpon>UbertestersSDK.a</DependentUpon>
     </Compile>
+    <Compile Include="LinkWith.cs" />
   </ItemGroup>
 </Project>

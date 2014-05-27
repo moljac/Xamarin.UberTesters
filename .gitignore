@@ -175,3 +175,5 @@ FakesAssemblies/
 
 
 **/*.DS_Store
+/docs/ubertesters.sdk.ios %
+/*.userprefs

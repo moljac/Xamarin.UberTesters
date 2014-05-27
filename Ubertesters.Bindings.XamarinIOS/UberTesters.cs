@@ -3,6 +3,7 @@ using System;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using System.Runtime.InteropServices;
+using MonoTouch.ObjCRuntime;
 
 namespace UbertestersSDK 
 {
@@ -68,16 +69,22 @@ namespace UbertestersSDK
 	public partial interface Ubertesters : IUITextViewDelegate, UTAlertDelegate {
 
 		[Export ("lockScreen")]
-		LockScreenViewControllerUbertesters LockScreen { get; }
+		// LockScreenViewControllerUbertesters  // maybe internal?!? make it NSObject
+		NSObject 
+		LockScreen { get; }
 
 		[Export ("userProfileScreen")]
-		UserProfileViewController UserProfileScreen { get; }
+		// UserProfileViewController 			// maybe internal?!? make it NSObject
+		NSObject 
+		UserProfileScreen { get; }
 
 		[Export ("apiKey", ArgumentSemantic.Retain)]
 		string ApiKey { get; set; }
 
 		[Export ("mainView", ArgumentSemantic.Retain)]
-		CustomViewUbertesters MainView { get; set; }
+		// CustomViewUbertesters  				// maybe internal?!? make it NSObject
+		NSObject 
+		MainView { get; set; }
 
 		[Export ("isOpenGL")]
 		bool IsOpenGL { get; set; }
@@ -103,7 +110,14 @@ namespace UbertestersSDK
 		[Export ("lockingMode")]
 		LockingMode LockingMode { get; set; }
 
-		[Static, Export ("Shared"), Verify ("ObjC method massaged into getter property", "/Users/moljac/Projects/HolisticWare/Components/ubertesters.com/docs/ubertesters.sdk.ios /UbertestersSDK/UbertestersSDK.framework/Versions/A/Headers/Ubertesters.h", Line = 102)]
+		[Static, Export ("Shared")
+		//, Verify 
+		//	(
+		//	  "ObjC method massaged into getter property"
+		//	, "~/docs/ubertesters.sdk.ios /UbertestersSDK/UbertestersSDK.framework/Versions/A/Headers/Ubertesters.h"
+		//	, Line = 102
+		//	)
+		]
 		Ubertesters Shared { get; }
 
 		[Export ("Initialize")]
@@ -136,10 +150,24 @@ namespace UbertestersSDK
 		[Export ("UTLog")]
 		void UTLog (string format, UTLogLevel level);
 
-		[Export ("IsOnline"), Verify ("ObjC method massaged into getter property", "/Users/moljac/Projects/HolisticWare/Components/ubertesters.com/docs/ubertesters.sdk.ios /UbertestersSDK/UbertestersSDK.framework/Versions/A/Headers/Ubertesters.h", Line = 160)]
+		[Export ("IsOnline")
+		//, Verify 
+		//	(
+		//	  "ObjC method massaged into getter property"
+		//	, "~/docs/ubertesters.sdk.ios /UbertestersSDK/UbertestersSDK.framework/Versions/A/Headers/Ubertesters.h"
+		//	, Line = 160
+		//	)
+		]
 		bool IsOnline { get; }
 
-		[Export ("GetPhoneState"), Verify ("ObjC method massaged into getter property", "/Users/moljac/Projects/HolisticWare/Components/ubertesters.com/docs/ubertesters.sdk.ios /UbertestersSDK/UbertestersSDK.framework/Versions/A/Headers/Ubertesters.h", Line = 161)]
+		[Export ("GetPhoneState")
+		//, Verify 
+		//	(
+		//	  "ObjC method massaged into getter property"
+		//	, "~/docs/ubertesters.sdk.ios /UbertestersSDK/UbertestersSDK.framework/Versions/A/Headers/Ubertesters.h"
+		//	, Line = 161
+		//	)
+		]
 		string GetPhoneState { get; }
 
 		[Export ("MakeAppExit")]
@@ -157,7 +185,14 @@ namespace UbertestersSDK
 		[Export ("MakeUTLibWindowKeyAndVisible")]
 		void MakeUTLibWindowKeyAndVisible ();
 
-		[Export ("GetUTLibWindow"), Verify ("ObjC method massaged into getter property", "/Users/moljac/Projects/HolisticWare/Components/ubertesters.com/docs/ubertesters.sdk.ios /UbertestersSDK/UbertestersSDK.framework/Versions/A/Headers/Ubertesters.h", Line = 167)]
+		[Export ("GetUTLibWindow")
+		//, Verify 
+		//	(
+		//	  "ObjC method massaged into getter property"
+		//	, "~/docs/ubertesters.sdk.ios /UbertestersSDK/UbertestersSDK.framework/Versions/A/Headers/Ubertesters.h"
+		//	, Line = 167
+		//	)
+		]
 		UIWindow GetUTLibWindow { get; }
 
 		[Export ("PlaySystemSound")]
@@ -169,13 +204,32 @@ namespace UbertestersSDK
 		[Export ("ShowUserProfileScreen")]
 		void ShowUserProfileScreen ();
 
-		[DllImport ("/Users/moljac/Projects/HolisticWare/Components/ubertesters.com/docs/ubertesters.sdk.ios /UbertestersSDK/UbertestersSDK.framework/Versions/A/Headers/Ubertesters.h")]
+		// Error BI1012: 
+		//		btouch: No Export or Bind attribute defined on UbertestersSDK.Ubertesters.HandleUbertestersException (BI1012) 
+		[Export ("HandleUbertestersException")]
+		// Error CS0601: 
+		//		The DllImport attribute must be specified on a method marked `static' and `extern' (CS0601)
+		//[DllImport ("~/docs/ubertesters.sdk.ios /UbertestersSDK/UbertestersSDK.framework/Versions/A/Headers/Ubertesters.h")]
+		//extern		// Error CS0106: The modifier `extern' is not valid for this item (CS0106) 
+		//static		// Error CS0106: The modifier `static' is not valid for this item (CS0106)
 		void HandleUbertestersException (NSException exception);
 
-		[DllImport ("/Users/moljac/Projects/HolisticWare/Components/ubertesters.com/docs/ubertesters.sdk.ios /UbertestersSDK/UbertestersSDK.framework/Versions/A/Headers/Ubertesters.h")]
+		// Error BI1012: 
+		//		btouch: No Export or Bind attribute defined on UbertestersSDK.Ubertesters.HandleUbertestersException (BI1012) 
+		[Export ("SignalUbertestersHandler")]
+		// Error CS0601: The DllImport attribute must be specified on a method marked `static' and `extern' (CS0601)
+		//[DllImport ("~/docs/ubertesters.sdk.ios /UbertestersSDK/UbertestersSDK.framework/Versions/A/Headers/Ubertesters.h")]
+		//extern		// Error CS0106: The modifier `extern' is not valid for this item (CS0106) 
+		//static		// Error CS0106: The modifier `static' is not valid for this item (CS0106)
 		void SignalUbertestersHandler (int signal);
 
-		[DllImport ("/Users/moljac/Projects/HolisticWare/Components/ubertesters.com/docs/ubertesters.sdk.ios /UbertestersSDK/UbertestersSDK.framework/Versions/A/Headers/Ubertesters.h")]
+		// Error BI1012: 
+		//		btouch: No Export or Bind attribute defined on UbertestersSDK.Ubertesters.HandleUbertestersException (BI1012) 
+		[Export ("installUberErrorHandler")]
+		// Error CS0601: The DllImport attribute must be specified on a method marked `static' and `extern' (CS0601)
+		//[DllImport ("~/docs/ubertesters.sdk.ios /UbertestersSDK/UbertestersSDK.framework/Versions/A/Headers/Ubertesters.h")]
+		//extern		// Error CS0106: The modifier `extern' is not valid for this item (CS0106) 
+		//static		// Error CS0106: The modifier `static' is not valid for this item (CS0106)
 		void InstallUberErrorHandler ();
 	}
 

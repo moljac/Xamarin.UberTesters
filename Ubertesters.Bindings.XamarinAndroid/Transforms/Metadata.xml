@@ -11,62 +11,62 @@
 	path="/api/package[@name='com.ubertesters.sdk']" 
 	name="managedName"
 	>
-	UberTestersSDK
+	UbertestersSDK
   </attr>
   <attr 
 	path="/api/package[@name='com.ubertesters.sdk.factory']" 
 	name="managedName"
 	>
-	UberTestersSDK.Factory
+	UbertestersSDK.Factory
   </attr>
   <attr 
 	path="/api/package[@name='com.ubertesters.sdk.model']" 
 	name="managedName"
 	>
-	UberTestersSDK.Model
+	UbertestersSDK.Model
   </attr>
   <attr 
 	path="/api/package[@name='com.ubertesters.sdk.tools']" 
 	name="managedName"
 	>
-	UberTestersSDK.Tools
+	UbertestersSDK.Tools
   </attr>
   <attr 
 	path="/api/package[@name='com.ubertesters.sdk.utility']" 
 	name="managedName"
 	>
-	UberTestersSDK.Utility
+	UbertestersSDK.Utility
   </attr>
  
   <attr 
 	path="/api/package[@name='com.ubertesters.common']" 
 	name="managedName"
 	>
-	UberTestersSDK.Common
+	UbertestersSDK.Common
   </attr>
   <attr 
 	path="/api/package[@name='com.ubertesters.common.models']" 
 	name="managedName"
 	>
-	UberTestersSDK.Common.Models
+	UbertestersSDK.Common.Models
   </attr>
   <attr 
 	path="/api/package[@name='com.ubertesters.common.settings']" 
 	name="managedName"
 	>
-	UberTestersSDK.Common.Settings
+	UbertestersSDK.Common.Settings
   </attr>
   <attr 
 	path="/api/package[@name='com.ubertesters.common.utils']" 
 	name="managedName"
 	>
-	UberTestersSDK.Common.Utils
+	UbertestersSDK.Common.Utils
   </attr>
   <attr 
 	path="/api/package[@name='com.ubertesters.common.utils.api']" 
 	name="managedName"
 	>
-	UberTestersSDK.Common.Utils.API
+	UbertestersSDK.Common.Utils.API
   </attr>
   <!--
   -->
@@ -75,5 +75,10 @@
   Warning BG8501: 
   empty event name in Com.Ubertesters.Sdk.Utility.ScreenshotProvider.IListener.SetListener 
   -->
-
+  <attr 
+	path="/api/package[@name='com.ubertesters.sdk.utility']/class[@name='ScreenshotProvider']/method[@name='setListener']" 
+	name="eventName"
+	>
+	OnScreenshot
+	</attr>
 </metadata>

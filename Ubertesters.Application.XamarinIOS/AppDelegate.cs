@@ -31,6 +31,11 @@ namespace Ubertesters.Application.XamarinIOS
 			// If you have defined a root view controller, set it here:
 			// window.RootViewController = myViewController;
 			
+
+			UbertestersSDK.Ubertesters ut = new UbertestersSDK.Ubertesters ();
+			ut.Initialize ();
+
+
 			// make the window visible
 			window.MakeKeyAndVisible ();
 			
