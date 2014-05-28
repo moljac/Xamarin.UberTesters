@@ -5,7 +5,7 @@ using System.Linq;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
-namespace Ubertesters.Application.XamarinIOS
+namespace UbertestersSDKSample.Application.XamarinIOS
 {
 	public class Application
 	{

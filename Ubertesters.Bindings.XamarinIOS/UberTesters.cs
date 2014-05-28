@@ -123,7 +123,7 @@ namespace UbertestersSDK
 		[Export ("Initialize")]
 		void Initialize ();
 
-		[Export ("Initialize")]
+		[Export ("Initialize:mode")]
 		void Initialize (LockingMode mode);
 
 		[Export ("InitializeWithOptions")]
@@ -147,7 +147,7 @@ namespace UbertestersSDK
 		[Export ("UTLog")]
 		void UTLog (string format, string level);
 
-		[Export ("UTLog")]
+		[Export ("UTLog:level")]
 		void UTLog (string format, UTLogLevel level);
 
 		[Export ("IsOnline")

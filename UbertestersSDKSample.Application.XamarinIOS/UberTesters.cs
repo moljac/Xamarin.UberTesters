@@ -5,7 +5,7 @@ using System.Drawing;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
-namespace Ubertesters.Application.XamarinIOS
+namespace UbertestersSDKSample.Application.XamarinIOS
 {
 	public partial class Ubertesters : UIViewController
 	{
