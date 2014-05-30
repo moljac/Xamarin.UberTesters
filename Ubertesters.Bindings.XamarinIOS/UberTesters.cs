@@ -24,10 +24,10 @@ namespace UbertestersSDK
 		[Export ("utAlertDelegate", ArgumentSemantic.Assign)]
 		UTAlertDelegate UtAlertDelegate { get; set; }
 
-		[Export ("InitWithTitle")]
+		[Export ("initWithTitle:mesage:cancelButton:otherButton:")]
 		IntPtr Constructor (string title, string message, string cancelButton, string otherButton);
 
-		[Export ("Show")]
+		[Export ("Show:")]
 		void Show (UIView alert);
 	}
 
@@ -120,13 +120,13 @@ namespace UbertestersSDK
 		]
 		Ubertesters Shared { get; }
 
-		[Export ("Initialize")]
+		[Export ("initialize")]
 		void Initialize ();
 
-		[Export ("Initialize:mode")]
+		[Export ("initialize:")]
 		void Initialize (LockingMode mode);
 
-		[Export ("InitializeWithOptions")]
+		[Export ("InitializeWithOptions:")]
 		void InitializeWithOptions (UbertestersOptions options);
 
 		[Export ("MakeScreenshot")]
@@ -144,10 +144,10 @@ namespace UbertestersSDK
 		[Export ("HideMenu")]
 		void HideMenu ();
 
-		[Export ("UTLog")]
+		[Export ("UTLog:level:")]
 		void UTLog (string format, string level);
 
-		[Export ("UTLog:level")]
+		[Export ("UTLog:withLevel:")]
 		void UTLog (string format, UTLogLevel level);
 
 		[Export ("IsOnline")
@@ -176,10 +176,10 @@ namespace UbertestersSDK
 		[Export ("ShowLockScreen")]
 		void ShowLockScreen ();
 
-		[Export ("PostLogs")]
+		[Export ("PostLogs:token:")]
 		void PostLogs (string logs, string token);
 
-		[Export ("PostCrash")]
+		[Export ("PostCrash:token:state:rid:uid:")]
 		void PostCrash (string log, string token, string state, string rid, string uid);
 
 		[Export ("MakeUTLibWindowKeyAndVisible")]
@@ -195,10 +195,10 @@ namespace UbertestersSDK
 		]
 		UIWindow GetUTLibWindow { get; }
 
-		[Export ("PlaySystemSound")]
+		[Export ("PlaySystemSound:")]
 		void PlaySystemSound (int soundID);
 
-		[Export ("EnableTimer")]
+		[Export ("EnableTimer:")]
 		void EnableTimer (bool res);
 
 		[Export ("ShowUserProfileScreen")]
@@ -206,7 +206,7 @@ namespace UbertestersSDK
 
 		// Error BI1012: 
 		//		btouch: No Export or Bind attribute defined on UbertestersSDK.Ubertesters.HandleUbertestersException (BI1012) 
-		[Export ("HandleUbertestersException")]
+		[Export ("HandleUbertestersException:")]
 		// Error CS0601: 
 		//		The DllImport attribute must be specified on a method marked `static' and `extern' (CS0601)
 		//[DllImport ("~/docs/ubertesters.sdk.ios /UbertestersSDK/UbertestersSDK.framework/Versions/A/Headers/Ubertesters.h")]
@@ -216,7 +216,7 @@ namespace UbertestersSDK
 
 		// Error BI1012: 
 		//		btouch: No Export or Bind attribute defined on UbertestersSDK.Ubertesters.HandleUbertestersException (BI1012) 
-		[Export ("SignalUbertestersHandler")]
+		[Export ("SignalUbertestersHandler:")]
 		// Error CS0601: The DllImport attribute must be specified on a method marked `static' and `extern' (CS0601)
 		//[DllImport ("~/docs/ubertesters.sdk.ios /UbertestersSDK/UbertestersSDK.framework/Versions/A/Headers/Ubertesters.h")]
 		//extern		// Error CS0106: The modifier `extern' is not valid for this item (CS0106) 

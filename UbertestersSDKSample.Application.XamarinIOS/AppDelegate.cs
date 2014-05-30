@@ -16,6 +16,16 @@ namespace UbertestersSDKSample.Application.XamarinIOS
 		// class-level declarations
 		UIWindow window;
 
+		/// <summary>
+		/// Gets or sets the window.
+		/// </summary>
+		/// <value>The window.</value>
+		//public override UIWindow Window 
+		//{
+		//	get;
+		//	set;
+		//}
+
 		//
 		// This method is invoked when the application has loaded and is ready to run. In this
 		// method you should instantiate the window, load the UI into it and then make the window
@@ -35,6 +45,7 @@ namespace UbertestersSDKSample.Application.XamarinIOS
 			UbertestersSDK.Ubertesters ut = new UbertestersSDK.Ubertesters ();
 			ut.Initialize ();
 
+			window.RootViewController = new Ubertesters ();
 
 			// make the window visible
 			window.MakeKeyAndVisible ();

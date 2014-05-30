@@ -18,7 +18,7 @@ namespace UbertestersSDKSample.Application.XamarinIOS
 		}
 
 		public Ubertesters ()
-			: base (UserInterfaceIdiomIsPhone ? "Ubertesters_iPhone" : "Ubertesters_iPad", null)
+			: base (UserInterfaceIdiomIsPhone ? "UberTesters_iPhone" : "UberTesters_iPad", null)
 		{
 		}
 
