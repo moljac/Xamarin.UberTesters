@@ -1,0 +1,13 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Ubertesters.Upload.BusinessLogic.DLLnetfx4/UbertestersAPI.cs">
+    <Files>
+      <File FileName="Ubertesters.Upload.BusinessLogic.DLLnetfx4/UbertestersAPI.cs" Line="1" Column="1" />
+      <File FileName="UberTesters.UploadAPI.BusinessLogic.DLL_netfx4/HttpPost/HttpPostFormUpload.cs" Line="64" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
