@@ -9,9 +9,9 @@ using Android.OS;
 
 using Xamarin.Forms.Platform.Android;
 
-namespace Application.Xamarin.Forms.UI.Common.Droid
+namespace Application.XamarinForms.UI.Common.Droid
 {
-	[Activity(Label = "Application.Xamarin.Forms.UI.Common", MainLauncher = true)]
+	[Activity(Label = "Application.XamarinForms.UI.Common", MainLauncher = true)]
 	public class MainActivity : AndroidActivity
 	{
 		protected override void OnCreate(Bundle bundle)

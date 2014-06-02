@@ -65,7 +65,7 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\Ubertesters.Bindings.XamarinAndroid\Ubertesters.Bindings.XamarinAndroid.csproj">
+    <ProjectReference Include="..\..\Ubertesters.Bindings.XamarinAndroid\Ubertesters.Bindings.XamarinAndroid.csproj">
       <Project>{3E7113BE-EC45-4F12-BEEB-F410B3842010}</Project>
       <Name>Ubertesters.Bindings.XamarinAndroid</Name>
     </ProjectReference>
