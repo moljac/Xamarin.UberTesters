@@ -9,6 +9,7 @@ using Android.OS;
 
 using UbertestersSDK;
 //using Ubertesters.Sdk;
+using UbertestersSDKSample;
 
 namespace SampleUbertestersSDK
 {

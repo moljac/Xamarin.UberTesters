@@ -87,6 +87,67 @@ namespace Application.XamarinForms.UI.Common
 				}
 			};
 
+
+			StackLayout stack_layout_screenshot = new StackLayout () 
+			{
+				Orientation = StackOrientation.Horizontal,
+				Children = 
+				{
+					new Label()
+					{
+						Text = "Screenshots:"
+					}
+					, new Button()
+					{
+					  Text = "Screenshot"
+					, HorizontalOptions = LayoutOptions.FillAndExpand
+					}
+				}
+			};
+
+			StackLayout stack_layout_ut_page = new StackLayout () 
+			{
+				Orientation = StackOrientation.Horizontal,
+				Children = 
+				{
+					new Label()
+					{
+						Text = "UT Page:"
+					}
+					, new Button()
+					{
+					  Text = "UT Page - Show"
+					, HorizontalOptions = LayoutOptions.FillAndExpand
+					}
+				}
+			};
+
+			StackLayout stack_layout_offline_user_info = new StackLayout () 
+			{
+				Orientation = StackOrientation.Horizontal,
+				Children = 
+				{
+					new Label()
+					{
+						Text = "Offline:"
+					}
+					, new Switch()
+					{
+					}
+					//, new SwitchCell()
+					//{
+					//	Text = "User Information:"
+					//}
+					, new Label()
+					{
+						Text = "Offline:"
+					}
+					, new Switch()
+					{
+					}
+				}
+			};
+
 			Content = new StackLayout()
 			{
 				Orientation = StackOrientation.Vertical,
@@ -95,6 +156,9 @@ namespace Application.XamarinForms.UI.Common
 				  stack_layout_logger
 				, stack_layout_message
 				, stack_layout_buttons_info_warn_error
+				, stack_layout_screenshot
+				, stack_layout_ut_page
+				, stack_layout_offline_user_info
 				}
 			};
 		}

@@ -11,7 +11,7 @@ using Xamarin.Forms.Platform.Android;
 
 namespace Application.XamarinForms.UI.Common.Droid
 {
-	[Activity(Label = "Application.XamarinForms.UI.Common", MainLauncher = true)]
+	[Activity(Label = "UberTesters Sample", MainLauncher = true)]
 	public class MainActivity : AndroidActivity
 	{
 		protected override void OnCreate(Bundle bundle)
