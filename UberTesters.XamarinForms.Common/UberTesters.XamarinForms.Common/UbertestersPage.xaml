@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UberTesters.XamarinForms.Common.UbertestersPage"
+             Title="Grid Demo Page">
+  <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness">
+      <OnPlatform.iOS>
+        0, 20, 0, 0
+      </OnPlatform.iOS>
+    </OnPlatform>
+  </ContentPage.Padding>
+  
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+ 
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+ 
+    <Label 
+        Grid.Row="0" Grid.Column="0"
+    	Text="Logger:"
+	/>
+
+	<Label 
+	    Grid.Row="1" Grid.Column="0"
+		Text="Message:"
+		VerticalOptions = "Center"
+	/>
+	<Entry
+	    Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"
+		Text="..."
+	>
+	...
+	</Entry>
+
+ 	<Button
+        Grid.Row="2" Grid.Column="0" 
+        Text="Info"
+ 	>
+	Info
+ 	</Button>
+ 	<Button
+        Grid.Row="2" Grid.Column="1" 
+        Text="Warn"
+ 	>
+ 	</Button>
+ 	<Button
+        Grid.Row="2" Grid.Column="2" 
+        Text="Error"
+ 	>
+ 	</Button>
+
+	<Label 
+	    Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"
+		Text="Screenshots:"
+		VerticalOptions = "Center"
+	/>
+ 	<Button
+        Grid.Row="3" Grid.Column="2" 
+        Text="Take Screenshot"
+ 	>
+ 	</Button>
+
+	<Label 
+	    Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"
+		Text="Ubertester page:"
+		VerticalOptions = "Center"
+	/>
+ 	<Button
+        Grid.Row="4" Grid.Column="2" 
+        Text="Show"
+ 	>
+ 	</Button>
+
+
+ 	<Switch
+        Grid.Row="5" Grid.Column="0" 
+ 	/>
+ 	<Switch
+        Grid.Row="5" Grid.Column="2" 
+ 	/>
+ 	<!--
+    <Label Text="Span two columns"
+           Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
+           TextColor="Blue"
+           BackgroundColor="Yellow"
+           XAlign="Center"
+           YAlign="Center" />
+ 
+    <Label Text="Fixed 100x100"
+           Grid.Row="2" Grid.Column="2"
+           TextColor="Aqua"
+           BackgroundColor="Red"
+           XAlign="Center"
+           YAlign="Center" />
+	-->
+	  
+  </Grid>
+ 
+</ContentPage>
+
+<!--
+	Xamarin.UberTesters/Applications.Native.Xamarin.Forms/Application.Xamarin.Forms.UI.Common/obj/Debug/UbertestersPage.xaml.g.cs(19,19): 
+	Error CS0234: 
+		The type or namespace name `Xaml' does not exist in the namespace `Application.Xamarin.Forms'. 
+-->

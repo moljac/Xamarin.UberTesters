@@ -36,8 +36,8 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>UIMainStoryboardFile</key>
-	<string>UberTesters</string>
+	<key>NSMainNibFile</key>
+	<string>UberTesters_iPhone</string>
 	<key>ubertesters_project_id</key>
 	<string>7b81f56c-d4ff-11e3-ad70-22000ac44c54</string>
 </dict>

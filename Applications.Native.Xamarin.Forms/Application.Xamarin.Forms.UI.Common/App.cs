@@ -13,7 +13,10 @@ namespace Application.XamarinForms.UI.Common
 	{
 		public static Page GetMainPage()
 		{
-			return new UberTestersTestUI ();
+			return 
+				//new UberTestersTestUI ()
+				UberTestersPage()
+				;
 		}
 	}
 }
