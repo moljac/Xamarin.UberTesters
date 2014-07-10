@@ -13,7 +13,7 @@
   
   <Grid>
     <Grid.RowDefinitions>
-      <RowDefinition Height="*" />
+      <RowDefinition Height=".3333*" />
       <RowDefinition Height="*" />
       <RowDefinition Height="*" />
       <RowDefinition Height="*" />
@@ -38,26 +38,32 @@
 		VerticalOptions = "Center"
 	/>
 	<Entry
+		x:Name="editMessage"
 	    Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"
-		Text="..."
+		Text="message to be logged"
 	>
-	...
 	</Entry>
 
  	<Button
         Grid.Row="2" Grid.Column="0" 
         Text="Info"
+        x:Name="buttonInfo"
+        Clicked="buttonInfo_Clicked"
  	>
 	Info
  	</Button>
  	<Button
         Grid.Row="2" Grid.Column="1" 
         Text="Warn"
+		x:Name="buttonWarn"
+        Clicked="buttonWarn_Clicked"
  	>
  	</Button>
  	<Button
         Grid.Row="2" Grid.Column="2" 
         Text="Error"
+		x:Name="buttonError"
+        Clicked="buttonError_Clicked"
  	>
  	</Button>
 
@@ -69,6 +75,8 @@
  	<Button
         Grid.Row="3" Grid.Column="2" 
         Text="Take Screenshot"
+		x:Name="buttonScreenshotTake"
+        Clicked="buttonScreenshotTake_Clicked"
  	>
  	</Button>
 
@@ -80,6 +88,8 @@
  	<Button
         Grid.Row="4" Grid.Column="2" 
         Text="Show"
+		x:Name="buttonUbertestersPageShow"
+        Clicked="buttonUbertestersPageShow_Clicked"
  	>
  	</Button>
 
@@ -90,6 +100,7 @@
  	<Switch
         Grid.Row="5" Grid.Column="2" 
  	/>
+
  	<!--
     <Label Text="Span two columns"
            Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"

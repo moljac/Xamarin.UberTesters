@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 
 using Xamarin.Forms;
+using UberTesters.Xamarin.Forms.Common;
 
-using Application.XamarinForms.UI.Common;
 
 namespace Application.XamarinForms.UI.Common
 {
@@ -14,8 +14,8 @@ namespace Application.XamarinForms.UI.Common
 		public static Page GetMainPage()
 		{
 			return 
-				//new UberTestersTestUI ()
-				UberTestersPage()
+				new UberTestersTestUI ()
+				//new UberTestersPage()
 				;
 		}
 	}

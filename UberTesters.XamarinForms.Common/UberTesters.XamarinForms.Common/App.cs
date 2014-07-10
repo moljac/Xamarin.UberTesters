@@ -9,6 +9,7 @@ namespace UberTesters.XamarinForms.Common
 {
 	public class App
 	{
+
 		public static Page GetMainPage()
 		{
 			return 

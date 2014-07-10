@@ -61,4 +61,10 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <ItemGroup>
+    <ProjectReference Include="..\Ubertesters.Bindings.Common.PCL\Ubertesters.Bindings.Common.PCL.csproj">
+      <Project>{3A5D0DA2-B774-4977-91B4-52D651997573}</Project>
+      <Name>Ubertesters.Bindings.Common.PCL</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

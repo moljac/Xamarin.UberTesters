@@ -7,31 +7,37 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "UTAlert.h"
+#import <UIKit/UIKit.h>
 
 @class CustomViewUberTesters;
 @class UserProfileViewController;
 @class LockScreenViewControllerUberTesters;
 
-//enums
+/*!
+ * @typedef Ubertesters different mode options.
+ * @brief A list of option for Ubertesters launch.
+ * @code [[Ubertesters shared] 
+    initializeWithOptions:UTOptionsSlider];
+ */
 typedef enum {
-    /**Default options (Slider and UTOptionsLockingModeDisableUbertestersIfBuildNotExist).*/
-    UTOptionsDefault = 0,
+    /*!Default options (Slider and UTOptionsLockingModeDisableUbertestersIfBuildNotExist).*/
+    UbertestersOptionsDefault = 0,
     
-    /**Option for using Slider mode.*/
-    UTOptionsSlider = 1 << 0,
+    /*!Option for using Slider mode.*/
+    UbertestersOptionsSlider = 1 << 0,
     
-    /**Option for using Shake mode.*/
-    UTOptionsShake = 1 << 1,
+    /*!Option for using Shake mode.*/
+    UbertestersOptionsShake = 1 << 1,
     
-    /**Option for Manual mode.*/
-    UTOptionsManual = 1 << 2,
+    /*!Option for Manual mode.*/
+    UbertestersOptionsManual = 1 << 2,
     
-    /**Option for Locking mode (default).*/
-    UTOptionsLockingModeDisableUbertestersIfBuildNotExist = 1 << 3,  //is default option, that will not lock your application if auth function receive 74 error - application not found.
+    /*!Option for Locking mode (default).*/
+    UbertestersOptionsLockingModeDisableUbertestersIfBuildNotExist = 1 << 3,
 
-    /**Option for Locking mode.*/
-    UTOptionsLockingModeAppIfBuildNotExist = 1 << 4                  //locks app if build not exists.
+    /*!Option for Locking mode.*/
+    UbertestersOptionsLockingModeAppIfBuildNotExist = 1 << 4
+    
 } UbertestersOptions;
 
 typedef enum  {
@@ -39,39 +45,24 @@ typedef enum  {
     LockingModeLockAppIfBuildNotExist = 1,
 } LockingMode;
 
-typedef enum {
-    /**
-     *  Use slider mode.
-     */
-    UTSlider = 0,
-    /**
-     *  Use shake mode.
-     */
-    UTShake = 1,
-    /**
-     *  Use manual mode.
-     */
-    UTManual = 2
-} ActivationMode;
-
+/*!
+ * @typedef UTLog options.
+ * @brief Three option for UTLog method.
+ * @code [[Ubertesters shared] UTLog:@"Some text..."
+                withLevel:UTLogLevelInfo];
+ */
 typedef enum
 {
+    /*!Error level*/
     UTLogLevelError,
+    /*!Warning level*/
     UTLogLevelWarning,
+    /*!Information level*/
     UTLogLevelInfo
 } UTLogLevel;
 
-@interface Ubertesters : NSObject <UITextViewDelegate, UTAlertDelegate>
-{
-    BOOL dismissed;
-    BOOL sendReport;
-    UITextView *textView_feedback;
-    UIView *feedbackView;
-    UIButton *btn_send;
-    NSString *_crashFilePath;
-    BOOL isFirstTime;
-    NSTimer *timerLogs;
-}
+@interface Ubertesters : NSObject <UITextViewDelegate>
+
 @property (nonatomic, readonly) LockScreenViewControllerUberTesters *lockScreen;
 @property (nonatomic, readonly) UserProfileViewController *userProfileScreen;
 @property (nonatomic, retain) NSString* apiKey;
@@ -82,73 +73,77 @@ typedef enum
 @property (nonatomic, assign) BOOL isHide;
 @property (nonatomic, assign) BOOL autoUpdate;
 
+/*!
+ *if there is no internet connection user can work in offline mode
+ */
 @property (nonatomic) BOOL offlineMode;
-@property (nonatomic) NSTimeInterval uberTrigger;
 
 @property (nonatomic) BOOL isError;
 
-/**
- *  if customer sends this property in dictionary properties as YES -> after app receive error code APPLICATION NO FOUND -> we will not close the app
+/*!
+ * if customer sends this property in dictionary properties as YES -> after app receive error code APPLICATION NO FOUND -> we will not close the app
  
  Default is LockingModeDisableUbertestersIfBuildNotExist
  */
 @property (nonatomic, assign)LockingMode lockingMode;
 
-/**
+/*!
  *  Main method for accessing Ubertesters singleton.
  *
  *  @return Ubertestrs singleton.
  */
 + (Ubertesters*) shared;
 
-/**
+/*!
  Initialize Ubertesters framework with default properties:
  LockingMode = LockingModeDisableUbertestersIfBuildNotExist,
  ActivationMode = UTSlider
+ @warning You should initialize Ubertesters after you initialize your view controlllers, just before return YES!
  */
 - (void)initialize;
 
-/**
+/*!
  This method is deprecated!
  @see initializeWithOptions:
  */
 - (void)initialize:(LockingMode)mode __attribute__((deprecated(" use 'initializeWithOptions:' instead.")));
 
-/**
+/*!
  Initialize Ubertesters framework with user`s options:
- @param UTSlider initialize Ubertesters with menu picker buttons.
- @param UTShake initialize Ubertesters with shake gesture.
- @param UTManual initialize Ubertesters with manual mode.
+ UTOptionsSlider initialize Ubertesters with menu picker buttons.
+ UTOptionsShake initialize Ubertesters with shake gesture.
+ UTOptionsManual initialize Ubertesters with manual mode.
+ @warning You should initialize Ubertesters after you initialize your view controlllers, just before return YES!
  */
 - (void)initializeWithOptions:(UbertestersOptions)options;
 
 //API
-/**
+/*!
  *  Makes Screenshot of any view (openGL or UIKit).
  */
 - (void)makeScreenshot;
-/**
+/*!
  *  Shows menu slider.
  */
 - (void)showMenuSlider;
-/**
+/*!
  *  Hides menu slider.
  */
 - (void)hideMenuSlider;
-/**
+/*!
  *  Shows Ubertesters menu.
  */
 - (void)showMenu;
-/**
+/*!
  *  Hides Ubertesters menu.
  */
 - (void)hideMenu;
-/**
+/*!
  This method is deprecated!
  @see UTLog:withLevel:
  */
 - (void)UTLog:(NSString *)format level:(NSString *)level __attribute__((deprecated(" use 'UTLog:withLevel:' instead.")));
-/**
+/*!
  *  Logs custom message into session.
  *
  *  @param format of type NSString
@@ -167,14 +162,13 @@ typedef enum
 - (UIWindow *)getUTLibWindow;
 - (void)playSystemSound:(int)soundID;
 - (void)enableTimer:(BOOL)res;
-- (void)showUserProfileScreen;
 
 @end
 
-/**Handle Exception*/
+/*!Handle Exception*/
 void HandleUbertestersException(NSException *exception);
-/**Calls when signal occures in the system*/
+/*!Calls when signal occures in the system*/
 void SignalUbertestersHandler(int signal);
-/**Install Urban HandleEception to the app and uber menu*/
+/*!Install Urban HandleEception to the app and uber menu*/
 void installUberErrorHandler(void);
 
