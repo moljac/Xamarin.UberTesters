@@ -69,6 +69,10 @@
       <Project>{3E7113BE-EC45-4F12-BEEB-F410B3842010}</Project>
       <Name>Ubertesters.Bindings.XamarinAndroid</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\UberTesters.XamarinForms.Common\UberTesters.XamarinForms.Common.Android\UberTesters.XamarinForms.Common.Android.csproj">
+      <Project>{B9474AEF-2678-4E38-8FB0-AAE4E6B63CD8}</Project>
+      <Name>UberTesters.XamarinForms.Common.Android</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <TransformFile Include="Properties\AndroidManifest.xml" />

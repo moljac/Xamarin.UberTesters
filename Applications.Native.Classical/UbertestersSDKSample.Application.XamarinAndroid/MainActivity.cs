@@ -28,6 +28,8 @@ namespace SampleUbertestersSDK
 		CheckBox checkBoxOffline = null;
 		CheckBox checkBoxUserInfo = null;
 
+		UberTesters.XamarinForms.XamarinAndroid.UberTesters ubertesters_normalized;
+
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
@@ -50,6 +52,9 @@ namespace SampleUbertestersSDK
 			buttonUTpage.Click += buttonUTPage_Click;
 			buttonScreenshot.Click += buttonScreenshot_Click;
 
+
+			ubertesters_normalized = new UberTesters.XamarinForms.XamarinAndroid.UberTesters();
+
 			//button.Click += delegate
 			{
 
@@ -60,25 +65,30 @@ namespace SampleUbertestersSDK
 
 			};
 
+
 		}
+
 
 		void buttonLoggerInfo_Click (object sender, EventArgs e)
 		{
-			Ubertesters.Logger().Info("Info");
+			//Ubertesters.Logger().Info("Info");
+			ubertesters_normalized.Info("Info");
 
 			return;
 		}
 
 		void buttonLoggerWarn_Click (object sender, EventArgs e)
 		{
-			Ubertesters.Logger().Warn("Warn");
+			//Ubertesters.Logger().Warn("Warn");
+			ubertesters_normalized.Warn("Warn");
 
 			return;
 		}
 
 		void buttonLoggerError_Click (object sender, EventArgs e)
 		{
-			Ubertesters.Logger().Error("Error");
+			//Ubertesters.Logger().Error("Error");
+			ubertesters_normalized.Error("Error");
 
 			return;
 		}
@@ -90,13 +100,17 @@ namespace SampleUbertestersSDK
 			if (text.Contains ("Show"))
 			{
 				// to open Ubertesters page; 
-				Ubertesters.ShowUtPage (); 
+				//Ubertesters.ShowUtPage (); 
+				ubertesters_normalized.ShowUtPage();
+
 				buttonUTpage.Text.Replace ("Show", "Hide");
 			}
 			else if (text.Contains ("Hide"))
 			{
 				// to close Ubertesters page; 
-				Ubertesters.HideUtPage (); 
+				//Ubertesters.HideUtPage (); 
+				ubertesters_normalized.HideUtPage();
+
 				buttonUTpage.Text.Replace ("Hide", "Show");
 			}
 
@@ -106,7 +120,8 @@ namespace SampleUbertestersSDK
 		void buttonScreenshot_Click (object sender, EventArgs e)
 		{
 			//to take screenshot; 
-			Ubertesters.TakeScreenshot(); 
+			//Ubertesters.TakeScreenshot(); 
+			ubertesters_normalized.TakeScreenshot();
 
 			return;
 		}

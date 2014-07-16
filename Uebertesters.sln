@@ -406,7 +406,7 @@ Global
 		{611971AE-925B-4F44-A403-A0D46699204B} = {ED9C87DA-2928-4D03-B5C7-B045E158CF8B}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Applications.Native.Classical\UbertestersSDKSample.Application.XamarinAndroid\UbertestersSDKSample.Application.XamarinAndroid.csproj
+		StartupItem = UberTesters.XamarinForms.Common\UberTesters.XamarinForms.Common.Android\UberTesters.XamarinForms.Common.Android.csproj
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

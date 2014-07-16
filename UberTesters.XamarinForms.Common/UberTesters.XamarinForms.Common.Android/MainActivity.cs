@@ -9,18 +9,18 @@ using Android.OS;
 
 using Xamarin.Forms.Platform.Android;
 
-namespace UberTesters.XamarinForms.Common.Droid
+namespace UberTesters.XamarinForms.XamarinAndroid
 {
-	[Activity(Label = "UberTesters.XamarinForms.Common", MainLauncher = true)]
+	[Activity(Label = "UberTesters.XamarinForms", MainLauncher = true)]
 	public class MainActivity : AndroidActivity
 	{
 		protected override void OnCreate(Bundle bundle)
 		{
 			base.OnCreate(bundle);
 
-			Xamarin.Forms.Forms.Init(this, bundle);
+			global::Xamarin.Forms.Forms.Init(this, bundle);
 
-			SetPage(App.GetMainPage());
+			SetPage(global::UberTesters.XamarinForms.Common.App.GetMainPage());
 		}
 	}
 }

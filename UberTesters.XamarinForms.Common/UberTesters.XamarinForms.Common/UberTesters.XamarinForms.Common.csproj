@@ -39,7 +39,8 @@
       <DependentUpon>UbertestersPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="UberTestersTestUI.cs" />
-    <Compile Include="DependecyServices.cs" />
+    <Compile Include="UberTesters\DependecyServices.cs" />
+    <Compile Include="UberTesters\IUberTesters.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
@@ -78,5 +79,8 @@
       <Project>{3A5D0DA2-B774-4977-91B4-52D651997573}</Project>
       <Name>Ubertesters.Bindings.Common.PCL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UberTesters\" />
   </ItemGroup>
 </Project>
