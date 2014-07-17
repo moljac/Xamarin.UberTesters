@@ -1,0 +1,37 @@
+require "rake/clean"
+
+CLEAN.include "*.xam"
+CLEAN.include "xpkg"
+
+COMPONENT = "ComponentName-1.0.xam"
+
+file "xpkg/xpkg.exe" do
+	puts "* Downloading xpkg..."
+	mkdir "xpkg"
+	sh "curl -L https://components.xamarin.com/submit/xpkg > xpkg.zip"
+	sh "unzip -o xpkg.zip -d xpkg"
+	sh "rm xpkg.zip"
+end
+
+task :default => "xpkg/xpkg.exe" do
+	line = <<-END
+	mono xpkg/xpkg.exe create #{COMPONENT} \
+		--name="My ComponentName Component" \
+		--summary="Add a huge amount of ComponentNameness to your Xamarin apps." \
+		--publisher="ComponentName Corp, Inc." \
+		--website="http://ComponentNamecorp.com/component" \
+		--details="Details.md" \
+		--license="License.md" \
+		--getting-started="GettingStarted.md" \
+		--icon="icons/ComponentName_128x128.png" \
+		--icon="icons/ComponentName_512x512.png" \
+		--library="ios":"bin/ComponentName.iOS.dll" \
+		--library="android":"bin/ComponentName.Android.dll" \
+		--sample="iOS Sample. Demonstrates ComponentNameness on iOS.":"samples/ComponentName.iOS.sln" \
+		--sample="Android Sample. Demonstrates ComponentNameness on Android":"samples/ComponentName.Android.sln"
+		END
+	puts "* Creating #{COMPONENT}..."
+	puts line.strip.gsub "\t\t", "\\\n    "
+	sh line, :verbose => false
+	puts "* Created #{COMPONENT}"
+end
