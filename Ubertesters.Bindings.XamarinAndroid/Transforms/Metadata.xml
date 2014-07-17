@@ -80,5 +80,62 @@
 	name="eventName"
 	>
 	OnScreenshot
-	</attr>
+  </attr>
+
+  <attr 
+	path="/api/package[@name='com.ubertesters.sdk']/class[@name='Ubertesters']/method[@name='sendCrash']/parameter[@name='p0']" 
+	name="name"
+	>
+	message
+  </attr>
+
+  <attr 
+	path="/api/package[@name='com.ubertesters.sdk']/class[@name='Ubertesters']/method[@name='initialize']/parameter[@name='p0']" 
+	name="name"
+	>
+	application
+  </attr>
+
+  <attr 
+	path="/api/package[@name='com.ubertesters.sdk']/class[@name='Ubertesters']/method[@name='initialize']/parameter[@name='p1']" 
+	name="name"
+	>
+	lockingMode
+  </attr>
+
+  <attr 
+	path="/api/package[@name='com.ubertesters.sdk']/class[@name='Ubertesters']/method[@name='initialize']/parameter[@name='p2']" 
+	name="name"
+	>
+	activationMode
+  </attr>
+
+  <attr 
+	path="/api/package[@name='com.ubertesters.sdk']/class[@name='Ubertesters']/method[@name='setOfflineModeEnabled']/parameter[@name='p0']" 
+	name="name"
+	>
+	offlineModeEnabled
+  </attr>
+
+  <attr 
+	path="/api/package[@name='com.ubertesters.sdk.utility']/class[@name='Logger']/method[@name='info']/parameter[@name='p0']" 
+	name="name"
+	>
+	message
+  </attr>
+
+  <attr 
+	path="/api/package[@name='com.ubertesters.sdk.utility']/class[@name='Logger']/method[@name='error']/parameter[@name='p0']" 
+	name="name"
+	>
+	message
+  </attr>
+
+  <attr 
+	path="/api/package[@name='com.ubertesters.sdk.utility']/class[@name='Logger']/method[@name='warn']/parameter[@name='p0']" 
+	name="name"
+	>
+	message
+  </attr>
+
 </metadata>
