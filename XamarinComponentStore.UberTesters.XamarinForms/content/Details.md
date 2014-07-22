@@ -1,6 +1,0 @@
-# Details #
-
-ComponentName
-
-
-

@@ -173,7 +173,16 @@ UpgradeLog*.htm
 # Microsoft Fakes
 FakesAssemblies/
 
+#=============================================================================================
+# holisticware
 
-**/*.DS_Store
 /docs/ubertesters.sdk.ios %
-/*.userprefs
+
+# MacOSX
+**/*.DS_Store
+
+# Xamarin Studio
+**/*.userprefs
+
+# Security (project id etc)
+**/AndroidManifest.xml

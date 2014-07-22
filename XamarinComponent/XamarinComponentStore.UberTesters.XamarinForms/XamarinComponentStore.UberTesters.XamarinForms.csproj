@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{382684C5-8B53-4B1D-9478-A05511C9B0ED}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XamarinComponentStore.UberTesters.XamarinForms</RootNamespace>
+    <AssemblyName>XamarinComponentStore.UberTesters.XamarinForms</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CustomCommands>
+      <CustomCommands>
+        <Command type="AfterBuild" command="component-create.sh" workingdir="" />
+      </CustomCommands>
+    </CustomCommands>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin.apps\xpkg\xpkg" />
+    <None Include="bin.apps\xpkg\xpkg.zip" />
+    <None Include="component-create.bat" />
+    <None Include="content\Details.md" />
+    <None Include="content\GettingStarted.md" />
+    <None Include="content\License.md" />
+    <None Include="content\Rakefile" />
+    <None Include="content\README.md" />
+    <None Include="component-create.sh" />
+    <None Include="compile.bat" />
+    <None Include="readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin.apps\xpkg\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="bin.apps\xpkg\mdoc.exe" />
+    <Content Include="bin.apps\xpkg\Mono.Cecil.dll" />
+    <Content Include="bin.apps\xpkg\monodoc.dll" />
+    <Content Include="bin.apps\xpkg\Newtonsoft.Json.dll" />
+    <Content Include="bin.apps\xpkg\xpkg.exe" />
+    <Content Include="content\.gitignore" />
+    <Content Include="content\icons\ComponentName_128x128.png" />
+    <Content Include="content\icons\ComponentName_512x512.png" />
+    <Content Include="content\samples\ComponentName.Android.sln" />
+    <Content Include="content\samples\ComponentName.iOS.sln" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="content\bin\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>cd  ..\..\
+component-create.bat</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
