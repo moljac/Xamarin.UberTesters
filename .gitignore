@@ -185,4 +185,8 @@ FakesAssemblies/
 **/*.userprefs
 
 # Security (project id etc)
-**/AndroidManifest.xml
+#**/AndroidManifest.xml
+
+**/*.secure.data.md
+**/*.data.md
+**/*.secure.md
